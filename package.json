@@ -1,26 +1,15 @@
 {
   "name": "degoog-themes",
-  "version": "1.0.0",
-  "description": "Themes repository for Degoog meta-search engine",
-  "type": "module",
-  "repo-image": "logo2.svg",
-  "extensions": [
+  "description": "Themes repository for degoog.",
+  "author": "palmtree",
+  "themes": [
     {
-      "id": "palmtree-technology",
-      "name": "Palmtree Technology",
-      "type": "theme",
       "path": "themes/palmtree-technology",
+      "name": "Palmtree Technology",
       "description": "palmtree.technology website style theming",
-      "icon": "logo2.svg"
+      "version": "1.0.0"
     }
   ],
-  "keywords": [
-    "degoog",
-    "degoog-themes",
-    "theme",
-    "palmtree-technology",
-    "cyberpunk"
-  ],
-  "author": "palmtree",
-  "license": "MIT"
+  "repo-image": "logo2.svg",
+  "type": "module"
 }
