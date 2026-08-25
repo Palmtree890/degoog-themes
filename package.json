@@ -1,0 +1,19 @@
+{
+  "name": "degoog-theme-cyberpunk",
+  "version": "1.0.0",
+  "description": "Cyberpunk Neon Grid & Glassmorphism Theme for Degoog",
+  "main": "style.css",
+  "degoog": {
+    "type": "theme",
+    "manifest": "theme.json"
+  },
+  "keywords": [
+    "degoog",
+    "theme",
+    "cyberpunk",
+    "glassmorphism",
+    "dark-mode"
+  ],
+  "author": "palmtree",
+  "license": "MIT"
+}

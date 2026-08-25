@@ -1,0 +1,24 @@
+{
+  "id": "degoog-theme-cyberpunk",
+  "name": "Cyberpunk Glass",
+  "version": "1.0.0",
+  "description": "A cyberpunk-inspired neon grid and glassmorphism dark theme for Degoog search.",
+  "type": "theme",
+  "author": "palmtree",
+  "license": "MIT",
+  "css": [
+    "style.css"
+  ],
+  "settingsSchema": {
+    "showGrid": {
+      "type": "boolean",
+      "label": "Show Background Neon Grid",
+      "default": true
+    },
+    "glowEffects": {
+      "type": "boolean",
+      "label": "Enable Neon Glow on Hover",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,366 @@
+/* =========================================================================
+   DEGOOG THEME: CYBERPUNK GLASS
+   Cyberpunk Grid + Glassmorphism UI
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. FONTS IMPORT (Must be at the top of stylesheet)
+   ------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+
+/* -------------------------------------------------------------------------
+   2. CORE PALETTE & CSS VARIABLES
+   ------------------------------------------------------------------------- */
+:root {
+  /* Accent & Primary Colors */
+  --primary: #38bdf8;
+  --primary-hover: #7dd3fc;
+  --primary-rgb: 56, 189, 248;
+  --accent: var(--primary);
+  --accent-hover: var(--primary-hover);
+
+  /* Backgrounds */
+  --bg: #020617;
+  --bg-light: rgba(15, 23, 42, 0.82);
+  --bg-hover: rgba(15, 23, 42, 0.65);
+  --overlay-bg: rgba(2, 6, 23, 0.88);
+
+  /* Borders */
+  --border: rgba(56, 189, 248, 0.12);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(56, 189, 248, 0.35);
+
+  /* Typography Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-link: #38bdf8;
+  --text-link-hover: #a5f3fc;
+  --text-link-visited: #7dd3fc;
+  --text-cite: #10b981;
+  --text-snippet: #cbd5e1;
+
+  /* Search Components */
+  --search-bar-bg: rgba(15, 23, 42, 0.82);
+  --search-bar-bg-hover: rgba(15, 23, 42, 0.95);
+  --search-bar-border: rgba(56, 189, 248, 0.15);
+
+  /* Interactive Elements */
+  --btn-bg: #38bdf8;
+  --btn-text: #020617;
+  --btn-secondary-bg: rgba(255, 255, 255, 0.045);
+
+  /* Glassmorphism & Effects */
+  --glass-blur: blur(18px);
+  --panel-radius: 1.5rem;
+  --card-shadow: 0 8px 35px rgba(0, 0, 0, 0.38);
+  --glow-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+
+/* -------------------------------------------------------------------------
+   3. GLOBAL BASE & CYBERPUNK GRID
+   ------------------------------------------------------------------------- */
+html,
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", "Plus Jakarta Sans", monospace, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional setting: disable grid if requested via settings attribute */
+[data-show-grid="false"] body,
+body.no-grid {
+  background-image: none;
+}
+
+
+/* -------------------------------------------------------------------------
+   4. RESULTS HEADER & SEARCH BAR
+   ------------------------------------------------------------------------- */
+#results-header {
+  background: transparent;
+  border: none;
+  position: relative;
+  z-index: 20;
+  padding-top: 1rem;
+}
+
+#results-header .degoog-search-bar,
+.degoog-search-bar {
+  background: var(--search-bar-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--search-bar-border);
+  border-radius: 999px;
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.50),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  transition: all 0.25s ease;
+}
+
+#results-header .degoog-search-bar:focus-within,
+.degoog-search-bar:focus-within {
+  border-color: var(--border-focus);
+  box-shadow:
+    0 6px 35px rgba(0, 0, 0, 0.60),
+    var(--glow-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#results-header input,
+#search-input {
+  background: transparent;
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", monospace;
+  caret-color: var(--primary);
+  border: none;
+  outline: none;
+}
+
+#results-header input::placeholder,
+#search-input::placeholder {
+  color: var(--text-muted);
+}
+
+
+/* -------------------------------------------------------------------------
+   5. NAVIGATION & TABS
+   ------------------------------------------------------------------------- */
+.degoog-tab {
+  color: var(--text-secondary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.degoog-tab:hover {
+  color: var(--primary-hover);
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.degoog-tab.active,
+.degoog-tab[aria-selected="true"] {
+  color: var(--primary);
+  background: rgba(56, 189, 248, 0.10);
+  border-bottom: 2px solid var(--primary);
+}
+
+
+/* -------------------------------------------------------------------------
+   6. SLOT PANELS & AT-A-GLANCE (ANSWER SUMMARY)
+   ------------------------------------------------------------------------- */
+.degoog-panel--slot {
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  background: var(--bg-light);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--card-shadow);
+  overflow: visible;
+}
+
+.degoog-panel--slot-title {
+  padding: 14px 18px;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.degoog-panel--slot-body,
+.degoog-panel--slot-body-padded {
+  padding: 18px 20px;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: visible;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+.degoog-panel--slot-body p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  line-height: 1.55;
+}
+
+.degoog-panel--slot-body a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+.degoog-panel--slot-body a:hover {
+  color: var(--text-link-hover);
+  text-decoration: underline;
+}
+
+
+/* -------------------------------------------------------------------------
+   7. RESULTS LIST & RESULT CARDS
+   ------------------------------------------------------------------------- */
+#results-list {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  padding-top: 4px;
+  box-sizing: border-box;
+}
+
+#results-list a,
+.result-title a {
+  color: var(--text-link);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#results-list a:hover,
+.result-title a:hover {
+  color: var(--text-link-hover);
+  text-decoration: underline;
+}
+
+.result-title a:visited {
+  color: var(--text-link-visited);
+}
+
+.result-cite,
+.result-url {
+  color: var(--text-cite);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.775rem;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.result-snippet {
+  color: var(--text-snippet);
+  font-size: 0.925rem;
+  line-height: 1.65;
+  margin-top: 4px;
+}
+
+
+/* -------------------------------------------------------------------------
+   8. GENERIC DEGOOG PANELS
+   ------------------------------------------------------------------------- */
+.degoog-panel {
+  background: var(--bg-light);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.42);
+}
+
+
+/* -------------------------------------------------------------------------
+   9. INTERACTIVE BUTTONS & CONTROLS
+   ------------------------------------------------------------------------- */
+.degoog-icon-btn {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  color: var(--primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.degoog-icon-btn:hover {
+  background: rgba(56, 189, 248, 0.10);
+  border-color: rgba(56, 189, 248, 0.30);
+  box-shadow: var(--glow-shadow);
+  color: var(--primary-hover);
+}
+
+
+/* -------------------------------------------------------------------------
+   10. DROPDOWNS & FLYOUT MENUS
+   ------------------------------------------------------------------------- */
+.degoog-dropdown {
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
+  padding: 0.5rem;
+}
+
+.degoog-menu-item {
+  color: var(--text-secondary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.15s ease;
+}
+
+.degoog-menu-item:hover {
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--text-primary);
+}
+
+
+/* -------------------------------------------------------------------------
+   11. CUSTOM SCROLLBAR
+   ------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+
+/* -------------------------------------------------------------------------
+   12. MOBILE & RESPONSIVE DESIGN
+   ------------------------------------------------------------------------- */
+@media (max-width: 780px) {
+  .degoog-panel--slot-body,
+  .degoog-panel--slot-body-padded {
+    padding: 14px 16px;
+  }
+
+  .degoog-panel--slot {
+    margin-top: 14px;
+    margin-bottom: 18px;
+    border-radius: 1rem;
+  }
+
+  #results-list {
+    margin-top: 18px;
+  }
+}
