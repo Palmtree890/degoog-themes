@@ -1,39 +1,40 @@
-# Cyberpunk Glass - Degoog Theme
+# Palmtree Technology - Degoog Theme
 
-A cyberpunk-inspired neon grid and glassmorphism dark theme for the **Degoog** search engine aggregator.
+A cyberpunk-inspired neon grid and glassmorphism dark theme extension for the **Degoog** meta-search engine.
 
 ## Features
 
 - **Cyberpunk Grid Background**: Deep dark navy backdrop (`#020617`) with cyan neon grid lines.
 - **Glassmorphism Panels**: Frosted blur panels (`backdrop-filter: blur(18px)`) with glowing cyan borders.
 - **Developer-Friendly Typography**: Monospace accents powered by `JetBrains Mono` and clean text with `Plus Jakarta Sans`.
-- **Plugin & Slot Panel Compatibility**: Native spacing and padding for At-A-Glance summary widgets and slot plugins without UI overlap.
+- **Plugin & Slot Compatibility**: Spacing and padding for At-A-Glance summary widgets and slot plugins without UI clipping.
 - **Responsive Layout**: Optimized for mobile and desktop screens.
 
-## File Structure
+## Repository Structure
 
 ```text
-├── theme.json      # Degoog extension manifest
-├── style.css       # Main theme stylesheet
-├── package.json    # Package metadata
-└── README.md       # Documentation & usage
+├── package.json                              # Central extension manifest
+├── README.md                                 # Documentation & usage
+└── themes/
+    └── palmtree-technology/
+        ├── theme.json                        # Theme metadata & settings schema
+        └── style.css                         # Theme stylesheet
 ```
 
 ## Installation in Degoog
 
-### Method 1: Local Theme Folder
-1. Copy or clone this folder into your Degoog extensions directory:
-   ```bash
-   cp -r degoog-theme-cyberpunk /path/to/degoog/themes/cyberpunk
-   ```
-2. Open Degoog in your browser.
-3. Go to **Settings → Themes**.
-4. Select **Cyberpunk Glass** and click **Save**.
+### Method 1: Extension Store / Git Repository
+1. In Degoog, go to **Settings → Extensions → Install from URL**.
+2. Enter `https://github.com/Palmtree890/degoog-themes.git`.
+3. Degoog will parse `package.json` and load `themes/palmtree-technology`.
+4. Go to **Settings → Themes** and select **Palmtree Technology**.
 
-### Method 2: Git / Community Extension
-1. Host this repository on GitHub/GitLab.
-2. In Degoog, navigate to **Settings → Extensions → Install from URL**.
-3. Paste the repository URL and click install.
+### Method 2: Manual Directory Placement
+1. Copy the `themes/palmtree-technology` directory into your Degoog instance's `themes/` directory:
+   ```bash
+   cp -r themes/palmtree-technology /path/to/degoog/themes/palmtree-technology
+   ```
+2. In Degoog, select **Palmtree Technology** under **Settings → Themes**.
 
 ## Configuration Options
 

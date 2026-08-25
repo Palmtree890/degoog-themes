@@ -1,8 +1,8 @@
 {
-  "id": "degoog-theme-cyberpunk",
-  "name": "Cyberpunk Glass",
+  "id": "palmtree-technology",
+  "name": "Palmtree Technology",
   "version": "1.0.0",
-  "description": "A cyberpunk-inspired neon grid and glassmorphism dark theme for Degoog search.",
+  "description": "Cyberpunk neon grid and glassmorphism dark theme for Degoog.",
   "type": "theme",
   "author": "palmtree",
   "license": "MIT",

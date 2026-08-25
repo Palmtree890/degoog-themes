@@ -1,18 +1,22 @@
 {
-  "name": "degoog-theme-cyberpunk",
+  "name": "degoog-themes",
   "version": "1.0.0",
-  "description": "Cyberpunk Neon Grid & Glassmorphism Theme for Degoog",
-  "main": "style.css",
-  "degoog": {
-    "type": "theme",
-    "manifest": "theme.json"
-  },
+  "description": "Themes repository for Degoog meta-search engine",
+  "extensions": [
+    {
+      "id": "palmtree-technology",
+      "name": "Palmtree Technology",
+      "type": "theme",
+      "path": "themes/palmtree-technology",
+      "description": "Cyberpunk neon grid and glassmorphism dark theme for Degoog"
+    }
+  ],
   "keywords": [
     "degoog",
+    "degoog-themes",
     "theme",
-    "cyberpunk",
-    "glassmorphism",
-    "dark-mode"
+    "palmtree-technology",
+    "cyberpunk"
   ],
   "author": "palmtree",
   "license": "MIT"
