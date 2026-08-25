@@ -1,26 +1,7 @@
 {
-  "id": "palmtree-technology",
   "name": "Palmtree Technology",
   "version": "1.0.0",
   "description": "palmtree.technology website style theming",
-  "type": "theme",
   "author": "palmtree890",
-  "license": "MIT",
-  "css": [
-    "style.css"
-  ],
-  "icon": "logo2.svg",
-  "preview": "logo2.svg",
-  "settingsSchema": {
-    "showGrid": {
-      "type": "boolean",
-      "label": "Show Background Neon Grid",
-      "default": true
-    },
-    "glowEffects": {
-      "type": "boolean",
-      "label": "Enable Neon Glow on Hover",
-      "default": true
-    }
-  }
+  "css": "style.css"
 }

@@ -78,13 +78,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Optional setting: disable grid if requested via settings attribute */
-[data-show-grid="false"] body,
-body.no-grid {
-  background-image: none;
-}
-
-
 /* -------------------------------------------------------------------------
    4. RESULTS HEADER & SEARCH BAR
    ------------------------------------------------------------------------- */
