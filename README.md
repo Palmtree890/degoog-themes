@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo2.svg" alt="Palmtree Technology Logo" width="220" />
+</p>
+
 # Palmtree Technology - Degoog Theme
 
 A cyberpunk-inspired neon grid and glassmorphism dark theme extension for the **Degoog** meta-search engine.

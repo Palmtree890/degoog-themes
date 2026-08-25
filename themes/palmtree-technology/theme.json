@@ -9,6 +9,8 @@
   "css": [
     "style.css"
   ],
+  "icon": "logo2.svg",
+  "preview": "logo2.svg",
   "settingsSchema": {
     "showGrid": {
       "type": "boolean",
