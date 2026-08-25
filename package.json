@@ -2,13 +2,16 @@
   "name": "degoog-themes",
   "version": "1.0.0",
   "description": "Themes repository for Degoog meta-search engine",
+  "type": "module",
+  "repo-image": "logo2.svg",
   "extensions": [
     {
       "id": "palmtree-technology",
       "name": "Palmtree Technology",
       "type": "theme",
       "path": "themes/palmtree-technology",
-      "description": "palmtree.technology website style theming"
+      "description": "palmtree.technology website style theming",
+      "icon": "logo2.svg"
     }
   ],
   "keywords": [
