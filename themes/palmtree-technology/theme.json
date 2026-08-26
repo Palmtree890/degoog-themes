@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "description": "palmtree.technology website style theming",
   "author": "palmtree890",
-  "css": "style.css"
+  "css": "style.css",
+  "settingsSchema": [
+    { "key": "active", "type": "select", "options": ["on"] }
+  ],
+  "dataAttrsFromSettings": {
+    "active": "palmtree"
+  }
 }

@@ -12,7 +12,7 @@
 /* -------------------------------------------------------------------------
    2. CORE PALETTE & CSS VARIABLES
    ------------------------------------------------------------------------- */
-:root {
+html[data-palmtree="on"] {
   /* Accent & Primary Colors */
   --primary: #38bdf8;
   --primary-hover: #7dd3fc;
@@ -62,8 +62,8 @@
 /* -------------------------------------------------------------------------
    3. GLOBAL BASE & CYBERPUNK GRID
    ------------------------------------------------------------------------- */
-html,
-body {
+html[data-palmtree="on"],
+html[data-palmtree="on"] body {
   background-color: var(--bg);
   background-image:
     linear-gradient(rgba(56, 189, 248, 0.035) 1px, transparent 1px),
@@ -81,7 +81,7 @@ body {
 /* -------------------------------------------------------------------------
    4. RESULTS HEADER & SEARCH BAR
    ------------------------------------------------------------------------- */
-#results-header {
+html[data-palmtree="on"] #results-header {
   background: transparent;
   border: none;
   position: relative;
@@ -89,8 +89,8 @@ body {
   padding-top: 1rem;
 }
 
-#results-header .degoog-search-bar,
-.degoog-search-bar {
+html[data-palmtree="on"] #results-header .degoog-search-bar,
+html[data-palmtree="on"] .degoog-search-bar {
   background: var(--search-bar-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -102,8 +102,8 @@ body {
   transition: all 0.25s ease;
 }
 
-#results-header .degoog-search-bar:focus-within,
-.degoog-search-bar:focus-within {
+html[data-palmtree="on"] #results-header .degoog-search-bar:focus-within,
+html[data-palmtree="on"] .degoog-search-bar:focus-within {
   border-color: var(--border-focus);
   box-shadow:
     0 6px 35px rgba(0, 0, 0, 0.60),
@@ -111,8 +111,8 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-#results-header input,
-#search-input {
+html[data-palmtree="on"] #results-header input,
+html[data-palmtree="on"] #search-input {
   background: transparent;
   color: var(--text-primary);
   font-family: "JetBrains Mono", monospace;
@@ -121,8 +121,8 @@ body {
   outline: none;
 }
 
-#results-header input::placeholder,
-#search-input::placeholder {
+html[data-palmtree="on"] #results-header input::placeholder,
+html[data-palmtree="on"] #search-input::placeholder {
   color: var(--text-muted);
 }
 
@@ -130,7 +130,7 @@ body {
 /* -------------------------------------------------------------------------
    5. NAVIGATION & TABS
    ------------------------------------------------------------------------- */
-.degoog-tab {
+html[data-palmtree="on"] .degoog-tab {
   color: var(--text-secondary);
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
@@ -141,13 +141,13 @@ body {
   text-decoration: none;
 }
 
-.degoog-tab:hover {
+html[data-palmtree="on"] .degoog-tab:hover {
   color: var(--primary-hover);
   background: rgba(56, 189, 248, 0.05);
 }
 
-.degoog-tab.active,
-.degoog-tab[aria-selected="true"] {
+html[data-palmtree="on"] .degoog-tab.active,
+html[data-palmtree="on"] .degoog-tab[aria-selected="true"] {
   color: var(--primary);
   background: rgba(56, 189, 248, 0.10);
   border-bottom: 2px solid var(--primary);
@@ -157,7 +157,7 @@ body {
 /* -------------------------------------------------------------------------
    6. SLOT PANELS & AT-A-GLANCE (ANSWER SUMMARY)
    ------------------------------------------------------------------------- */
-.degoog-panel--slot {
+html[data-palmtree="on"] .degoog-panel--slot {
   position: relative;
   box-sizing: border-box;
   margin-top: 20px;
@@ -171,7 +171,7 @@ body {
   overflow: visible;
 }
 
-.degoog-panel--slot-title {
+html[data-palmtree="on"] .degoog-panel--slot-title {
   padding: 14px 18px;
   box-sizing: border-box;
   font-weight: 600;
@@ -179,8 +179,8 @@ body {
   border-bottom: 1px solid var(--border-light);
 }
 
-.degoog-panel--slot-body,
-.degoog-panel--slot-body-padded {
+html[data-palmtree="on"] .degoog-panel--slot-body,
+html[data-palmtree="on"] .degoog-panel--slot-body-padded {
   padding: 18px 20px;
   box-sizing: border-box;
   min-width: 0;
@@ -189,18 +189,18 @@ body {
   color: var(--text-primary);
 }
 
-.degoog-panel--slot-body p {
+html[data-palmtree="on"] .degoog-panel--slot-body p {
   margin-top: 0;
   margin-bottom: 12px;
   line-height: 1.55;
 }
 
-.degoog-panel--slot-body a {
+html[data-palmtree="on"] .degoog-panel--slot-body a {
   color: var(--text-link);
   text-decoration: none;
 }
 
-.degoog-panel--slot-body a:hover {
+html[data-palmtree="on"] .degoog-panel--slot-body a:hover {
   color: var(--text-link-hover);
   text-decoration: underline;
 }
@@ -209,7 +209,7 @@ body {
 /* -------------------------------------------------------------------------
    7. RESULTS LIST & RESULT CARDS
    ------------------------------------------------------------------------- */
-#results-list {
+html[data-palmtree="on"] #results-list {
   position: relative;
   z-index: 1;
   margin-top: 24px;
@@ -217,8 +217,8 @@ body {
   box-sizing: border-box;
 }
 
-#results-list a,
-.result-title a {
+html[data-palmtree="on"] #results-list a,
+html[data-palmtree="on"] .result-title a {
   color: var(--text-link);
   font-size: 1.125rem;
   font-weight: 600;
@@ -226,18 +226,18 @@ body {
   transition: color 0.2s ease;
 }
 
-#results-list a:hover,
-.result-title a:hover {
+html[data-palmtree="on"] #results-list a:hover,
+html[data-palmtree="on"] .result-title a:hover {
   color: var(--text-link-hover);
   text-decoration: underline;
 }
 
-.result-title a:visited {
+html[data-palmtree="on"] .result-title a:visited {
   color: var(--text-link-visited);
 }
 
-.result-cite,
-.result-url {
+html[data-palmtree="on"] .result-cite,
+html[data-palmtree="on"] .result-url {
   color: var(--text-cite);
   font-family: "JetBrains Mono", monospace;
   font-size: 0.775rem;
@@ -245,7 +245,7 @@ body {
   word-break: break-all;
 }
 
-.result-snippet {
+html[data-palmtree="on"] .result-snippet {
   color: var(--text-snippet);
   font-size: 0.925rem;
   line-height: 1.65;
@@ -256,7 +256,7 @@ body {
 /* -------------------------------------------------------------------------
    8. GENERIC DEGOOG PANELS
    ------------------------------------------------------------------------- */
-.degoog-panel {
+html[data-palmtree="on"] .degoog-panel {
   background: var(--bg-light);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -269,7 +269,7 @@ body {
 /* -------------------------------------------------------------------------
    9. INTERACTIVE BUTTONS & CONTROLS
    ------------------------------------------------------------------------- */
-.degoog-icon-btn {
+html[data-palmtree="on"] .degoog-icon-btn {
   background: var(--btn-secondary-bg);
   border: 1px solid var(--border-light);
   border-radius: 0.75rem;
@@ -282,7 +282,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.degoog-icon-btn:hover {
+html[data-palmtree="on"] .degoog-icon-btn:hover {
   background: rgba(56, 189, 248, 0.10);
   border-color: rgba(56, 189, 248, 0.30);
   box-shadow: var(--glow-shadow);
@@ -293,7 +293,7 @@ body {
 /* -------------------------------------------------------------------------
    10. DROPDOWNS & FLYOUT MENUS
    ------------------------------------------------------------------------- */
-.degoog-dropdown {
+html[data-palmtree="on"] .degoog-dropdown {
   background: rgba(15, 23, 42, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -303,14 +303,14 @@ body {
   padding: 0.5rem;
 }
 
-.degoog-menu-item {
+html[data-palmtree="on"] .degoog-menu-item {
   color: var(--text-secondary);
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem;
   transition: all 0.15s ease;
 }
 
-.degoog-menu-item:hover {
+html[data-palmtree="on"] .degoog-menu-item:hover {
   background: rgba(56, 189, 248, 0.08);
   color: var(--text-primary);
 }
@@ -319,21 +319,21 @@ body {
 /* -------------------------------------------------------------------------
    11. CUSTOM SCROLLBAR
    ------------------------------------------------------------------------- */
-::-webkit-scrollbar {
+html[data-palmtree="on"] ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
-::-webkit-scrollbar-track {
+html[data-palmtree="on"] ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+html[data-palmtree="on"] ::-webkit-scrollbar-thumb {
   background: #1e293b;
   border-radius: 999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+html[data-palmtree="on"] ::-webkit-scrollbar-thumb:hover {
   background: #334155;
 }
 
@@ -342,18 +342,18 @@ body {
    12. MOBILE & RESPONSIVE DESIGN
    ------------------------------------------------------------------------- */
 @media (max-width: 780px) {
-  .degoog-panel--slot-body,
-  .degoog-panel--slot-body-padded {
+  html[data-palmtree="on"] .degoog-panel--slot-body,
+  html[data-palmtree="on"] .degoog-panel--slot-body-padded {
     padding: 14px 16px;
   }
 
-  .degoog-panel--slot {
+  html[data-palmtree="on"] .degoog-panel--slot {
     margin-top: 14px;
     margin-bottom: 18px;
     border-radius: 1rem;
   }
 
-  #results-list {
+  html[data-palmtree="on"] #results-list {
     margin-top: 18px;
   }
 }
