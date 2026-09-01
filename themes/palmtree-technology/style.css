@@ -157,7 +157,8 @@ html[data-palmtree="on"] .degoog-tab[aria-selected="true"] {
 /* -------------------------------------------------------------------------
    6. SLOT PANELS & AT-A-GLANCE (ANSWER SUMMARY)
    ------------------------------------------------------------------------- */
-html[data-palmtree="on"] .degoog-panel--slot {
+html[data-palmtree="on"] .degoog-panel--slot,
+html[data-palmtree="on"] .degoog-panel.degoog-panel--slot {
   position: relative;
   box-sizing: border-box;
   margin-top: 20px;
