@@ -165,7 +165,7 @@ html[data-palmtree="on"] .degoog-panel--slot {
   background: var(--bg-light);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 0.5px solid var(--border);
+  border: none;
   border-radius: var(--panel-radius);
   box-shadow: var(--card-shadow);
   overflow: visible;
