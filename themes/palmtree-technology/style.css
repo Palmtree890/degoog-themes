@@ -348,21 +348,35 @@ html[data-palmtree="on"] .pt-logo-palmtree {
   display: none !important;
 }
 
+html[data-palmtree="on"] .pt-logo-degoog .logo-letter {
+  letter-spacing: -0.08em;
+  margin: 0;
+  padding: 0;
+}
+
 html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-degoog {
   display: none !important;
 }
 
 html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree {
   display: inline !important;
-  color: var(--text-primary);
   font-family: "Plus Jakarta Sans", "JetBrains Mono", sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 2rem;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #38bdf8, #a5f3fc);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree .pt-letter-blue {
+  color: #4285F4;
+}
+html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree .pt-letter-red {
+  color: #EA4335;
+}
+html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree .pt-letter-yellow {
+  color: #FBBC05;
+}
+html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree .pt-letter-green {
+  color: #34A853;
 }
 
 /* -------------------------------------------------------------------------
