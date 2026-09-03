@@ -340,7 +340,33 @@ html[data-palmtree="on"] ::-webkit-scrollbar-thumb:hover {
 
 
 /* -------------------------------------------------------------------------
-   12. MOBILE & RESPONSIVE DESIGN
+   12. LOGO BRANDING SWAP (data-branding setting)
+      - default / degoog: show the letter logo
+      - palmtree: show 'palmtree search' text
+   ------------------------------------------------------------------------- */
+html[data-palmtree="on"] .pt-logo-palmtree {
+  display: none;
+}
+
+html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-degoog {
+  display: none;
+}
+
+html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree {
+  display: inline;
+  color: var(--text-primary);
+  font-family: "Plus Jakarta Sans", "JetBrains Mono", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #38bdf8, #a5f3fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------------------------------------------------
+   13. MOBILE & RESPONSIVE DESIGN
    ------------------------------------------------------------------------- */
 @media (max-width: 780px) {
   html[data-palmtree="on"] .degoog-panel--slot-body,

@@ -1,13 +1,33 @@
 {
   "name": "Palmtree Technology",
-  "version": "1.0.0",
   "description": "palmtree.technology website style theming",
   "author": "palmtree890",
   "css": "style.css",
+  "templates": {
+    "home-logo": "templates/home-logo.html",
+    "search-header": "templates/search-header.html"
+  },
   "settingsSchema": [
-    { "key": "active", "type": "select", "options": ["on"] }
+    {
+      "key": "active",
+      "type": "select",
+      "options": [
+        "on"
+      ]
+    },
+    {
+      "key": "branding",
+      "type": "select",
+      "label": "Logo text",
+      "description": "Replace the 'Degoog' logo text with 'Palmtree Search'",
+      "options": [
+        "degoog",
+        "palmtree"
+      ]
+    }
   ],
   "dataAttrsFromSettings": {
-    "active": "palmtree"
+    "active": "palmtree",
+    "branding": "branding"
   }
 }
