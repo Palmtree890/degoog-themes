@@ -20,6 +20,7 @@
       "type": "select",
       "label": "Logo text",
       "description": "Replace the 'Degoog' logo text with 'Palmtree Search'",
+      "value": "degoog",
       "options": [
         "degoog",
         "palmtree"
