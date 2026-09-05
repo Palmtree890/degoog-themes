@@ -1,5 +1,6 @@
 {
   "name": "Palmtree Technology",
+  "version": "1.2.0",
   "description": "palmtree.technology website style theming",
   "author": "palmtree890",
   "css": "style.css",
