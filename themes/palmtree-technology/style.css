@@ -377,14 +377,14 @@ html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree {
 /* Home page hero logo above the search bar */
 html[data-palmtree="on"][data-branding="palmtree"] .logo.pt-logo .pt-logo-palmtree,
 html[data-palmtree="on"][data-branding="palmtree"] #home-logo .pt-logo-palmtree {
-  font-size: clamp(3.25rem, 8vw, 6.5rem);
+  font-size: clamp(4.5rem, 12vw, 8rem);
   line-height: 1.15;
 }
 
 /* Results header logo */
 html[data-palmtree="on"][data-branding="palmtree"] .results-logo.pt-results-logo .pt-logo-palmtree,
 html[data-palmtree="on"][data-branding="palmtree"] #results-header .pt-logo-palmtree {
-  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
   line-height: 1.2;
 }
 
