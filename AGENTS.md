@@ -5,6 +5,7 @@ Static "store" repo for a [Degoog](https://github.com/degoog-org/degoog) meta-se
 ## Layout
 
 - `package.json` — required store manifest. Lists every item under `themes`/`plugins`/`engines`/`transports` as `{ path, name, description, version }`. A new theme folder is **not** visible in the store until added here. `repo-image` points at `logo2.svg`.
+- **Version rule (important):** every change to theme content **must** also bump the item's `version` in `package.json`. Degoog only deploys updated files to an installed theme when `updateAvailable` detects `version` differs from what's installed — it copies the theme folder and reloads it on "Update". No version bump = users press Refresh and nothing changes.
 - `themes/palmtree-technology/` — the only theme: `theme.json`, `style.css`, `logo2.svg`, `screenshots/`, `templates/`.
 - `logo2.svg`, `assets/logo2.svg`, `themes/palmtree-technology/logo2.svg` — three identical copies; keep them in sync if regenerated.
 
