@@ -11,5 +11,14 @@
     }
   ],
   "repo-image": "logo2.svg",
-  "type": "module"
+  "type": "module",
+  "plugins": [
+    {
+      "path": "plugins/osint",
+      "name": "OSINT",
+      "description": "Advanced DNS and Infrastructure intelligence report",
+      "version": "1.0.0",
+      "type": "search-result-tab"
+    }
+  ]
 }
