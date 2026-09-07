@@ -7,7 +7,7 @@ export const tab = {
 
   async executeSearch(query: string, page = 1, context: {
     dir: string
-    fetch: typeof fetch
+    fetch?: typeof fetch
     signProxyUrl: (url: string) => string
     useCache: <T>(namespace: string, defaultTtlMs: number) => {
       get: (key: string) => Promise<T | null>
@@ -39,6 +39,8 @@ export const tab = {
     }
 
     try {
+      const doFetch = context?.fetch ?? fetch;
+
       // 1. IP and ASN Lookup
       let targetIp = query;
       if (domainRegex.test(query)) {
@@ -47,7 +49,7 @@ export const tab = {
         targetIp = addresses[0];
       }
 
-      const ipData = await context.fetch(`https://ipapi.co/${targetIp}/json/`).then(res => res.json()).catch(() => ({}));
+      const ipData = await doFetch(`https://ipapi.co/${targetIp}/json/`).then(res => res.json()).catch(() => ({}));
       
       results.push({
         title: `Infrastructure: ${query}`,

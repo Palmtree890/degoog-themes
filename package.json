@@ -17,7 +17,7 @@
       "path": "plugins/osint",
       "name": "OSINT",
       "description": "Advanced DNS and Infrastructure intelligence report",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "type": "search-result-tab"
     }
   ]
