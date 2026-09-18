@@ -370,10 +370,7 @@ html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;
-}
-
-html[data-palmtree="on"][data-branding="palmtree"] .pt-logo-palmtree .pt-word {
-  display: block;
+  white-space: nowrap;
 }
 
 /* Home page hero logo above the search bar */
